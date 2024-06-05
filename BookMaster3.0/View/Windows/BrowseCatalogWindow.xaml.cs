@@ -1,4 +1,5 @@
 ﻿using BookMaster3._0;
+using BookMaster3._0.View.Windows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -94,6 +95,12 @@ namespace Bookmaster.View.Windows
         private void SearchBtn_Click(object sender, RoutedEventArgs e)
         {
             BookAuthorsLv.ItemsSource = App.context.BookAuthor.Where(ba => ba.Book.Title.Contains(titleTb.Text) && ba.Author.LastName.Contains(AuthorTb.Text)).ToList()     ;
+        }
+
+        private void Hyperlink_Click(object sender, RoutedEventArgs e)
+        {
+            BookAuthorsDetailsWindow bookauthdw = new BookAuthorsDetailsWindow(BookAuthorsLv.SelectedItem as BookAuthor);
+            bookauthdw.Show();
         }
     }
 }

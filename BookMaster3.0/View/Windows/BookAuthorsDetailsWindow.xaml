@@ -8,6 +8,10 @@
         Title="BookAuthorsDetailsWindow" Height="500" Width= " 400 " ResizeMode=" NoResize "
     WindowStartupLocation =" CenterScreen" >
     <Grid  Name="AuthorsGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="17*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height ="50"/>
             <RowDefinition Height ="10"/>
@@ -20,18 +24,18 @@
             <RowDefinition Height ="auto"/>
             <RowDefinition Height ="20"/>
             <RowDefinition Height ="auto"/>
-           
+
         </Grid.RowDefinitions>
-        <ComboBox Name="AuthorsCmb" SelectionChanged="AuthorsCmb_SelectionChanged"/>
-        <TextBlock Text="{Binding Author.BirthDay}" Grid.Row="2"/>
-        <TextBlock Text="Bio" Grid.Row="4"/>
-        <TextBlock Text="{Binding Author.Bio}" Grid.Row="6"/>
-        <TextBlock  Grid.Row="8">
+        <ComboBox Name="AuthorsCmb" SelectionChanged="AuthorsCmb_SelectionChanged" Grid.ColumnSpan="2"/>
+        <TextBlock Text="{Binding Author.BirthDay}" Grid.Row="2" Grid.ColumnSpan="2"/>
+        <TextBlock Text="Bio" Grid.Row="4" Grid.ColumnSpan="2"/>
+        <TextBlock Text="{Binding Author.Bio}" Grid.Row="6" Grid.ColumnSpan="2"/>
+        <TextBlock  Grid.Row="7" Grid.ColumnSpan="2" Margin="0,20,0,0" Grid.RowSpan="2" VerticalAlignment="Top">
             <Hyperlink Click="Hyperlink_Click">
                 <TextBlock Text="Learn more on Wikipedia"/>
             </Hyperlink>
         </TextBlock>
-        <Button Content="Close" Name="CloseBtn" Grid.Row="10" Click="CloseBtn_Click_1"/>
+        <Button Content="Close" Name="CloseBtn" Grid.Row="8" Click="CloseBtn_Click_1" Grid.ColumnSpan="2" Margin="0,44,0,24" Grid.RowSpan="3"/>
     </Grid>
 </Window>
 

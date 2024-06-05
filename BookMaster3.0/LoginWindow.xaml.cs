@@ -31,7 +31,8 @@ namespace BookMaster3._0
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            
+            MessageBox.Show("Добро пожаловать");
+            this.Close();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)

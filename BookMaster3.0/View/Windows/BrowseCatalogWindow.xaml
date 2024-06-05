@@ -151,7 +151,7 @@
 
                 <TextBlock Text="{Binding Book.FirstPublishDate.Year, StringFormat= Дата публикации :{0}}" Grid.Row="3"/>
                 <TextBlock Grid.Row="2" >
-                    <Hyperlink>
+                    <Hyperlink Click="Hyperlink_Click">
                         <TextBlock>
                             <TextBlock.Text>
                                 <MultiBinding StringFormat="{}{0} {1} {2}">
@@ -168,9 +168,7 @@
                 <TextBlock Text="{Binding Book.Descrption}" Grid.Row="6" TextWrapping="Wrap"/>
                 <Image Source="{Binding Book.Cover}" Grid.Column="1" Grid.RowSpan="11"/>
                 <TextBlock Grid.Row="2">
-                <Hyperlink>
-                     <TextBlock Text=""/>
-                </Hyperlink>
+
                 </TextBlock>
 
             </Grid>
