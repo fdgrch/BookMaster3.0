@@ -1,0 +1,55 @@
+﻿<Window x:Class="BookMaster3._0.ManageCutomers"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookMaster3._0"
+        mc:Ignorable="d"
+        Title="ManageCutomers" Height="350" Width="600">
+    <Grid>
+        <!--<Grid.RowDefinitions>
+            <RowDefinition Height ="1*"/>
+            <RowDefinition Height ="1*"/>
+            <RowDefinition Height ="1*"/>
+            <RowDefinition Height ="1*"/>
+            <RowDefinition Height ="1*"/>
+            <RowDefinition Height ="1*"/>
+            <RowDefinition Height ="1*"/>
+            <RowDefinition Height ="1*"/>
+            <RowDefinition Height ="1*"/>
+        </Grid.RowDefinitions>-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="180"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="15" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="15" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Customer ID" FontSize="12" Grid.Row="1"  Grid.ColumnSpan="3"/>
+            <TextBlock Text="Name" FontSize="12" Grid.Row="4"  Grid.ColumnSpan="3"/>
+            <TextBox Name="CustomerTb"  Grid.Row="2"  Grid.ColumnSpan="3"  Width="150" Height="30"/>
+            <TextBox Name="NameTb"  Grid.Row="5"  Grid.ColumnSpan="3"  Width="150" Height="30"/>
+            <Button Name ="SearchBtn"  Grid.Row="7" Click="SearchBtn_Click" Content="Search" FontSize="12"  Grid.ColumnSpan="3" Width="150" Height="30"/>
+            <Button Name ="EditBtn"  Grid.Row="10"  Content="Edit..." FontSize="12" Grid.Column="0" Width="70" Height="30" Click="EditBtn_Click"/>
+            <Button Name ="AddBtn"  Grid.Row="10"  Content="Add..." FontSize="12"  Grid.Column="3" Width="70" Height="30" Click="AddBtn_Click"/>
+            
+        </Grid>
+        
+    </Grid>
+</Window>
